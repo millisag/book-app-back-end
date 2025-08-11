@@ -22,10 +22,10 @@ class ApplicationController < ActionController::API
       auth_header = request.headers['Authorization']
       if auth_header.present? && auth_header.start_with?('Bearer ')
         auth_header.split(' ').last
-      end
+        end
     end
   
     def decode_token(token)
-      JWT.decode(token, Rails.application.secrets.secret_key_base, true, algorithm: 'HS256')
+      JWT.decode(token, Rails.application.config.secret_key_base, true, algorithm: 'HS256')
     end
-  end  
+  end
