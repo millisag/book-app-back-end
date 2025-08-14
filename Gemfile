@@ -62,7 +62,7 @@ group :development, :test do
 
   gem 'blueprinter'
   
-  gem 'sqlite3', '~> 1.4', '>= 1.4.2'
+  gem 'sqlite3', '~> 2.7'
 
 
 
